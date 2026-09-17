@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mibba",
+  "owner": {
+    "name": "Mibba",
+    "url": "https://mibba.co"
+  },
+  "metadata": {
+    "description": "Mibba plugins for notarial dossier and document research.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "mibba",
+      "source": "./plugins/mibba",
+      "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools."
+    }
+  ]
+}

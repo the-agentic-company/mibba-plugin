@@ -1,0 +1,30 @@
+{
+  "name": "mibba",
+  "version": "0.1.0",
+  "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools.",
+  "author": {
+    "name": "Mibba",
+    "url": "https://mibba.co"
+  },
+  "homepage": "https://mibba.co",
+  "repository": "https://github.com/baptistecolle/mibba-plugins",
+  "license": "MIT",
+  "keywords": ["mibba", "notary", "legal", "documents", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Mibba",
+    "shortDescription": "Research notarial dossiers with traceable evidence.",
+    "longDescription": "Connect Codex to your authorized Mibba workspace to find dossiers, inspect documents, search page-level evidence, audit cited pieces and deadlines, and produce complete activity reports. Mibba scopes every tool call to the workspace authorized during OAuth sign-in.",
+    "developerName": "Mibba",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://mibba.co",
+    "brandColor": "#111111",
+    "defaultPrompt": [
+      "Find a dossier in Mibba and summarize its available documents.",
+      "Audit the cited pieces and deadlines in this Mibba dossier.",
+      "Report this year's monthly dossier activity from Mibba."
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+# Mibba agent plugins
+
+Use Mibba with Codex and Claude Code. The shared plugin connects to Mibba's hosted OAuth MCP server and adds focused skills for notarial dossier research.
+
+## Codex
+
+Add the marketplace:
+
+```sh
+codex plugin marketplace add baptistecolle/mibba-plugins
+```
+
+Install the plugin:
+
+```sh
+codex plugin add mibba@mibba
+```
+
+## Claude Code
+
+Add the marketplace:
+
+```text
+/plugin marketplace add baptistecolle/mibba-plugins
+```
+
+Install the plugin:
+
+```text
+/plugin install mibba@mibba
+```
+
+Then run `/reload-plugins` if Claude asks you to reload.
+
+## Repository structure
+
+```text
+.
+├── .agents/plugins/marketplace.json
+├── .claude-plugin/marketplace.json
+└── plugins/mibba
+    ├── .codex-plugin/plugin.json
+    ├── .claude-plugin/plugin.json
+    ├── .mcp.json
+    ├── mcp.claude.json
+    └── skills/
+```
+
+See [plugins/mibba/README.md](plugins/mibba/README.md) for capabilities and data-access details.

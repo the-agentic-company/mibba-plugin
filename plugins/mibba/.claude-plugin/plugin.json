@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "mibba",
+  "displayName": "Mibba",
+  "version": "0.1.0",
+  "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools.",
+  "author": {
+    "name": "Mibba",
+    "url": "https://mibba.co"
+  },
+  "homepage": "https://mibba.co",
+  "repository": "https://github.com/baptistecolle/mibba-plugins",
+  "license": "MIT",
+  "keywords": ["mibba", "notary", "legal", "documents", "mcp"],
+  "mcpServers": "./mcp.claude.json"
+}
