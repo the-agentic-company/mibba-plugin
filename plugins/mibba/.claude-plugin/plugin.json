@@ -9,7 +9,7 @@
     "url": "https://mibba.co"
   },
   "homepage": "https://mibba.co",
-  "repository": "https://github.com/baptistecolle/mibba-plugins",
+  "repository": "https://github.com/the-agentic-company/mibba-plugin",
   "license": "MIT",
   "keywords": ["mibba", "notary", "legal", "documents", "mcp"],
   "mcpServers": "./mcp.claude.json"

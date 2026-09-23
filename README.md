@@ -7,7 +7,7 @@ Use Mibba with Codex and Claude Code. The shared plugin connects to Mibba's host
 Add the marketplace:
 
 ```sh
-codex plugin marketplace add baptistecolle/mibba-plugins
+codex plugin marketplace add the-agentic-company/mibba-plugin
 ```
 
 Install the plugin:
@@ -21,7 +21,7 @@ codex plugin add mibba@mibba
 Add the marketplace:
 
 ```text
-/plugin marketplace add baptistecolle/mibba-plugins
+/plugin marketplace add the-agentic-company/mibba-plugin
 ```
 
 Install the plugin:
