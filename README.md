@@ -55,11 +55,18 @@ When changing plugin packaging or marketplace metadata, use
 multi-client layout example, especially its
 [Claude manifest](https://github.com/paper-design/agent-plugins/blob/main/plugins/paper-desktop/.claude-plugin/plugin.json).
 For normative behavior, also check the
-[Claude plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference)
+[Claude plugin manifest reference](https://code.claude.com/docs/en/plugins-reference)
 and the [Agent Plugins specification](https://agent-plugins.org/specification).
 
-The Claude directory portal also requests listing metadata such as `icon`, `shortDescription`,
-`documentationUrl`, `supportUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl`. These values are
-declared in the Claude manifest for directory ingestion. Claude Code may warn that they are unknown
-because they do not affect local plugin loading; confirm their ingestion with the portal's
-validation step after each push.
+The Claude directory portal also requests listing metadata that is not part of the Claude plugin
+manifest. Keep these values in the portal rather than adding unknown fields to `plugin.json`:
+
+- Icon: `plugins/mibba/assets/logo512.png`
+- Short description: `Travaillez avec vos dossiers notariaux Mibba directement dans Claude.`
+- Documentation: `https://mibba.co/docs/installer-le-plugin-mibba`
+- Support: `https://mibba.co/contact`
+- Privacy policy: `https://mibba.co/politique-de-confidentialite`
+- Terms of service: `https://mibba.co/conditions-generales-utilisation`
+
+Run `claude plugin validate --strict plugins/mibba` after manifest changes. Unknown top-level
+fields are stripped by Claude Code and fail strict validation.
