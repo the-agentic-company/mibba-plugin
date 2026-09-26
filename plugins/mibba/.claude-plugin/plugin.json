@@ -3,8 +3,8 @@
   "name": "mibba",
   "displayName": "Mibba",
   "version": "0.1.0",
-  "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools.",
-  "shortDescription": "Work with your authorized Mibba notarial dossiers.",
+  "description": "Connectez Claude à Mibba pour consulter et gérer simplement vos dossiers notariaux autorisés.",
+  "shortDescription": "Travaillez avec vos dossiers notariaux Mibba directement dans Claude.",
   "author": {
     "name": "Mibba",
     "url": "https://mibba.co"
@@ -16,7 +16,7 @@
   "icon": "./assets/logo512.png",
   "privacyPolicyUrl": "https://mibba.co/politique-de-confidentialite",
   "termsOfServiceUrl": "https://mibba.co/conditions-generales-utilisation",
-  "license": "MIT",
-  "keywords": ["mibba", "notary", "legal", "documents", "mcp"],
+  "license": "proprietary",
+  "keywords": ["notariat", "notaire", "dossiers", "documents", "juridique"],
   "mcpServers": "./mcp.claude.json"
 }
