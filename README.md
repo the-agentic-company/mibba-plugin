@@ -47,3 +47,19 @@ Then run `/reload-plugins` if Claude asks you to reload.
 ```
 
 See [plugins/mibba/README.md](plugins/mibba/README.md) for capabilities and data-access details.
+
+## Maintainer references
+
+When changing plugin packaging or marketplace metadata, use
+[paper-design/agent-plugins](https://github.com/paper-design/agent-plugins) as a maintained
+multi-client layout example, especially its
+[Claude manifest](https://github.com/paper-design/agent-plugins/blob/main/plugins/paper-desktop/.claude-plugin/plugin.json).
+For normative behavior, also check the
+[Claude plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference)
+and the [Agent Plugins specification](https://agent-plugins.org/specification).
+
+The Claude directory portal also requests listing metadata such as `icon`, `shortDescription`,
+`documentationUrl`, `supportUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl`. These values are
+declared in the Claude manifest for directory ingestion. Claude Code may warn that they are unknown
+because they do not affect local plugin loading; confirm their ingestion with the portal's
+validation step after each push.
