@@ -20,10 +20,7 @@
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://mibba.co",
-    "privacyPolicyURL": "https://mibba.co/politique-de-confidentialite",
     "brandColor": "#111111",
-    "composerIcon": "./assets/logo512.png",
-    "logo": "./assets/logo512.png",
     "defaultPrompt": [
       "Find a dossier in Mibba and summarize its available documents.",
       "Audit the cited pieces and deadlines in this Mibba dossier.",

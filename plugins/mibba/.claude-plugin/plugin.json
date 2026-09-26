@@ -10,6 +10,8 @@
   },
   "homepage": "https://mibba.co",
   "repository": "https://github.com/the-agentic-company/mibba-plugin",
+  "icon": "./assets/logo512.png",
+  "privacyPolicyUrl": "https://mibba.co/politique-de-confidentialite",
   "license": "MIT",
   "keywords": ["mibba", "notary", "legal", "documents", "mcp"],
   "mcpServers": "./mcp.claude.json"
