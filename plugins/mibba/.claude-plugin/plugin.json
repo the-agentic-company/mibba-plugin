@@ -10,6 +10,8 @@
   },
   "homepage": "https://mibba.co/docs/installer-le-plugin-mibba",
   "repository": "https://github.com/the-agentic-company/mibba-plugin",
+  "icon": "./assets/logo512.png",
+  "privacyPolicyUrl": "https://mibba.co/politique-de-confidentialite",
   "license": "proprietary",
   "keywords": ["notariat", "notaire", "dossiers", "documents", "juridique"],
   "mcpServers": "./mcp.claude.json"

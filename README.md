@@ -58,15 +58,17 @@ For normative behavior, also check the
 [Claude plugin manifest reference](https://code.claude.com/docs/en/plugins-reference)
 and the [Agent Plugins specification](https://agent-plugins.org/specification).
 
-The Claude directory portal also requests listing metadata that is not part of the Claude plugin
-manifest. Keep these values in the portal rather than adding unknown fields to `plugin.json`:
+The Claude directory reads additional listing metadata. Keep the following fields in `plugin.json`
+to satisfy directory policy; current Claude Code releases accept both during strict validation:
 
 - Icon: `plugins/mibba/assets/logo512.png`
+- Privacy policy: `https://mibba.co/politique-de-confidentialite`
+
+Keep the remaining directory-only values in the portal:
+
 - Short description: `Travaillez avec vos dossiers notariaux Mibba directement dans Claude.`
 - Documentation: `https://mibba.co/docs/installer-le-plugin-mibba`
 - Support: `https://mibba.co/contact`
-- Privacy policy: `https://mibba.co/politique-de-confidentialite`
 - Terms of service: `https://mibba.co/conditions-generales-utilisation`
 
-Run `claude plugin validate --strict plugins/mibba` after manifest changes. Unknown top-level
-fields are stripped by Claude Code and fail strict validation.
+Run `claude plugin validate --strict plugins/mibba` after manifest changes.
