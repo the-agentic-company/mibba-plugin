@@ -1,0 +1,35 @@
+name: Plugin checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Install Claude Code
+        run: npm install --global @anthropic-ai/claude-code
+      - name: Validate Claude plugin and marketplace
+        run: |
+          claude plugin validate --strict plugins/mibba
+          claude plugin validate --strict .claude-plugin/marketplace.json
+          python3 scripts/validate-claude.py
+      - name: Package Claude plugin
+        run: tar -czf mibba-claude.tar.gz -C plugins/mibba .claude-plugin mcp.claude.json assets skills README.md
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mibba-claude
+          path: mibba-claude.tar.gz
+          if-no-files-found: error
+          retention-days: 14

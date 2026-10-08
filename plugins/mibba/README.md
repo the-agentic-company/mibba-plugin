@@ -18,6 +18,7 @@ When the agent first uses a Mibba tool, complete the Mibba sign-in and authoriza
 
 ## Skills
 
+- `mibba`: introduction to Mibba and guidance for retrieving synchronized iNot or Fiducial information through the Mibba MCP. Claude Code exposes it as `/mibba:mibba`; command naming depends on the client.
 - `dossier-research`: evidence-backed dossier and document research.
 - `document-audit`: inventory, cited-piece, and deadline audits.
 - `activity-report`: complete bounded-period activity reports.
