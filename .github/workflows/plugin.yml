@@ -21,10 +21,7 @@ jobs:
       - name: Install Claude Code
         run: npm install --global @anthropic-ai/claude-code
       - name: Validate Claude plugin and marketplace
-        run: |
-          claude plugin validate --strict plugins/mibba
-          claude plugin validate --strict .claude-plugin/marketplace.json
-          python3 scripts/validate-claude.py
+        run: python3 scripts/validate-claude.py
       - name: Package Claude plugin
         run: tar -czf mibba-claude.tar.gz -C plugins/mibba .claude-plugin mcp.claude.json assets skills README.md
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

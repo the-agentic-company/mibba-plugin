@@ -5,6 +5,17 @@ The directory tracks `main` in `the-agentic-company/mibba-plugin`, with the plug
 releasing changes. The `Plugin checks` workflow validates both manifests and the
 directory metadata and uploads the Claude plugin archive for review.
 
+Run the same checks locally before pushing:
+
+```sh
+python3 scripts/validate-claude.py
+```
+
+Install Claude Code first if it is missing. The script runs `claude plugin validate
+--strict` on the plugin and marketplace, then checks the directory metadata. Strict
+mode fails on warnings as well as errors. CI runs this script on pull requests and
+pushes to `main`, and packages the plugin only after validation succeeds.
+
 GitHub webhook `694025284` sends signed `push` deliveries to Anthropic. The directory
 fetches the tracked branch, validates it, scans it, and publishes eligible versions
 according to the portal's auto-publish setting. A green GitHub workflow does not
@@ -12,7 +23,8 @@ confirm that Anthropic has published the version. Check the directory's version
 history for that status.
 
 The webhook URL and signing secret are stored in EU Infisical, project
-`17910b99-1708-43e4-83bf-d8c4e2766171`, environment `prod`, folder `/mibba-plugin`:
+`17910b99-1708-43e4-83bf-d8c4e2766171`, environment `prod`, at the root `/` and in
+the `/mibba-plugin` folder:
 
 - `CLAUDE_DIRECTORY_WEBHOOK_URL`
 - `CLAUDE_DIRECTORY_WEBHOOK_SECRET`

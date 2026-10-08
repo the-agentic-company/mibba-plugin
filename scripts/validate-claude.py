@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
-"""Check directory metadata that Claude Code does not enforce."""
+"""Run Claude's strict validators and check additional directory metadata."""
 
 import json
+import shutil
 import struct
+import subprocess
 from pathlib import Path
 from urllib.parse import urlparse
 
 
 repo = Path(__file__).resolve().parents[1]
 root = repo / "plugins" / "mibba"
+if not shutil.which("claude"):
+    raise SystemExit("Install Claude Code before running validation: npm install --global @anthropic-ai/claude-code")
+
+for target in [root, repo / ".claude-plugin" / "marketplace.json"]:
+    subprocess.run(["claude", "plugin", "validate", "--strict", str(target)], cwd=repo, check=True)
+
 manifest = json.loads((root / ".claude-plugin" / "plugin.json").read_text())
 marketplace = json.loads((repo / ".claude-plugin" / "marketplace.json").read_text())
 
