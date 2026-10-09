@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "mibba",
   "version": "0.1.1",
   "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools.",
@@ -16,32 +17,6 @@
     "documents",
     "mcp"
   ],
-  "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
-  "interface": {
-    "displayName": "Mibba",
-    "shortDescription": "Research notarial dossiers",
-    "longDescription": "Use Mibba from ChatGPT and Codex to find notarial dossiers, inspect documents, search page-level evidence, audit cited pieces and supported deadlines, and produce monthly or annual activity reports. Requires a Mibba account with access to at least one workspace. OAuth sign-in limits access to your authorized workspace. Results depend on the synchronized documents available in Mibba; review supporting sources before relying on findings.",
-    "developerName": "Mibba",
-    "category": "Productivity",
-    "capabilities": [
-      "Read",
-      "Write"
-    ],
-    "websiteURL": "https://mibba.co",
-    "brandColor": "#111111",
-    "defaultPrompt": [
-      "Find a dossier in Mibba and summarize its available documents.",
-      "Audit the cited pieces and deadlines in this Mibba dossier.",
-      "Report this year's monthly dossier activity from Mibba."
-    ],
-    "supportURL": "https://mibba.co/contact",
-    "privacyPolicyURL": "https://mibba.co/politique-de-confidentialite",
-    "termsOfServiceURL": "https://mibba.co/conditions-generales-utilisation",
-    "brandColorDark": "#F3F3F3",
-    "composerIcon": "./assets/logo512.png",
-    "logo": "./assets/logo512.png"
-  },
   "extensions": {
     "com.openai": {
       "review": {
@@ -107,6 +82,30 @@
             "description": "Utilisez Mibba dans ChatGPT et Codex pour retrouver vos dossiers notariaux, consulter les documents, rechercher des preuves citées à la page, vérifier les pièces mentionnées et les délais pris en charge, et produire des rapports d’activité mensuels ou annuels. Un compte Mibba disposant d’un accès à au moins un espace de travail est nécessaire. L’authentification OAuth limite les accès à l’espace autorisé. Les résultats dépendent des documents synchronisés disponibles dans Mibba ; vérifiez les sources avant de vous appuyer sur les conclusions."
           }
         }
+      },
+      "interface": {
+        "displayName": "Mibba",
+        "shortDescription": "Research notarial dossiers",
+        "longDescription": "Use Mibba from ChatGPT and Codex to find notarial dossiers, inspect documents, search page-level evidence, audit cited pieces and supported deadlines, and produce monthly or annual activity reports. Requires a Mibba account with access to at least one workspace. OAuth sign-in limits access to your authorized workspace. Results depend on the synchronized documents available in Mibba; review supporting sources before relying on findings.",
+        "developerName": "Mibba",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://mibba.co",
+        "brandColor": "#111111",
+        "defaultPrompt": [
+          "Find a dossier in Mibba and summarize its available documents.",
+          "Audit the cited pieces and deadlines in this Mibba dossier.",
+          "Report this year's monthly dossier activity from Mibba."
+        ],
+        "supportURL": "https://mibba.co/contact",
+        "privacyPolicyURL": "https://mibba.co/politique-de-confidentialite",
+        "termsOfServiceURL": "https://mibba.co/conditions-generales-utilisation",
+        "brandColorDark": "#F3F3F3",
+        "composerIcon": "./assets/logo512.png",
+        "logo": "./assets/logo512.png"
       }
     }
   }

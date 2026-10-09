@@ -22,6 +22,18 @@ jobs:
         run: npm install --global @anthropic-ai/claude-code
       - name: Validate Claude plugin and marketplace
         run: python3 scripts/validate-claude.py
+      - name: Install portable plugin validation dependencies
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r requirements-dev.txt
+      - name: Validate and package OpenAI plugin
+        run: .venv/bin/python scripts/package-openai.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mibba-openai
+          path: dist/mibba-openai-*.zip
+          if-no-files-found: error
+          retention-days: 14
       - name: Package Claude plugin
         run: tar -czf mibba-claude.tar.gz -C plugins/mibba .claude-plugin mcp.claude.json assets skills README.md
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

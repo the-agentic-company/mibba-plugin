@@ -1,4 +1,16 @@
-# Claude directory publishing
+# Directory publishing
+
+## OpenAI
+
+Build the portable ZIP as described in
+[Plugin format and OpenAI requirements](plugin-specification.md#validate-and-build).
+The `Plugin checks` workflow validates and uploads `mibba-openai` alongside the
+Claude archive. Upload the ZIP through [OpenAI Plugins](https://platform.openai.com/plugins),
+resolve portal findings, verify the MCP domain, and test OAuth with the demo account.
+Complete reviewer access and the video walkthrough before submitting for review.
+Packaging success does not confirm runtime authentication or directory approval.
+
+## Claude
 
 The directory tracks `main` in `the-agentic-company/mibba-plugin`, with the plugin at
 `plugins/mibba`. Bump the Claude plugin and marketplace versions together when
