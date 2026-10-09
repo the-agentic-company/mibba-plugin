@@ -1,24 +1,24 @@
 ---
 name: document-audit
-description: Audits a Mibba dossier's document inventory, cited pieces, evidence, and legal deadlines. Use when the user asks what is present or missing, whether an act's annexes are available, or which dossier deadlines need attention.
+description: Vérifie l'inventaire documentaire, les pièces citées, les sources et les échéances juridiques d'un dossier Mibba. À utiliser pour déterminer les pièces présentes ou manquantes, retrouver les annexes d'un acte ou identifier les échéances à surveiller.
 ---
 
-# Mibba document audit
+# Vérification documentaire Mibba
 
-Audit only the dossier the user selected or the single dossier you unambiguously resolve.
+Vérifie uniquement le dossier choisi par l'utilisateur ou celui que tu identifies sans ambiguïté.
 
-## Inventory and cited pieces
+## Inventaire et pièces citées
 
-1. Resolve the dossier with `search_legal_records`, then load it with `get_legal_record`.
-2. Enumerate relevant documents with `search_documents`. Use pagination and totals when present; never describe a truncated first page as a complete inventory.
-3. When an act cites annexes or promised pieces, use `match_cited_documents`. Preserve its `present`, `uncertain`, and `absent` classifications.
-4. For an `uncertain` match, inspect the suggested page or search the document text before concluding. A poorly named scan may still contain the cited piece.
-5. Describe an absent piece as an observed inventory gap, not proof that the étude never received it.
+1. Identifie le dossier avec `search_legal_records`, puis consulte-le avec `get_legal_record`.
+2. Liste les documents pertinents avec `search_documents`. Utilise la pagination et les totaux disponibles. Une première page tronquée ne constitue pas un inventaire complet.
+3. Si un acte cite des annexes ou des pièces promises, utilise `match_cited_documents`. Conserve les catégories `present`, `uncertain` et `absent`.
+4. Pour une correspondance `uncertain`, examine la page suggérée ou recherche dans le texte avant de conclure. Un document numérisé mal nommé peut contenir la pièce citée.
+5. Présente une pièce absente comme une lacune observée dans l'inventaire, et non comme la preuve que l'étude ne l'a jamais reçue.
 
-## Deadlines
+## Échéances
 
-Use `compute_dossier_deadlines` for retraction periods, loan-offer acceptance, and diagnostic expiry. Supply only dates read from Mibba evidence, and cite the pages that establish those dates. Do not calculate legal deadlines mentally when the tool covers them.
+Utilise `compute_dossier_deadlines` pour les délais de rétractation, l'acceptation d'une offre de prêt et l'expiration des diagnostics. Fournis uniquement les dates établies par les sources Mibba et cite les pages correspondantes. Utilise cet outil pour les calculs juridiques qu'il prend en charge.
 
-## Output
+## Résultat
 
-Group results into present pieces, uncertain matches, observed gaps, and deadlines. Include Mibba-provided citations beside each material finding and state any unreadable or unsynchronized-document limitations.
+Regroupe les résultats en pièces présentes, correspondances incertaines, lacunes observées et échéances. Place les citations Mibba à côté de chaque constat important et précise les limites dues aux documents illisibles ou non synchronisés.

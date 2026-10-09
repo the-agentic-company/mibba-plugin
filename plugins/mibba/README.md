@@ -1,36 +1,38 @@
-# Mibba plugin
+# Plugin Mibba
 
-Connect ChatGPT, Codex, or Claude Code to the notarial dossiers and documents that your Mibba account is authorized to access.
+Vos dossiers iNot et Fiducial directement dans ChatGPT, Codex ou Claude, via Mibba.
 
-## Prerequisites
+Connectez ChatGPT, Codex ou Claude Code aux dossiers notariaux et aux documents accessibles avec votre compte Mibba.
 
-- A Mibba account with access to at least one workspace.
-- A supported ChatGPT, Codex, or Claude Code client with plugin and remote MCP support.
+## Prérequis
 
-## Features
+- Un compte Mibba avec accès à au moins un espace de travail.
+- Un client ChatGPT, Codex ou Claude Code compatible avec les plugins et les serveurs MCP distants.
 
-- Find dossiers, participants, properties, and document inventories.
-- Search document text and page-level evidence with Mibba-provided citations.
-- Audit cited pieces and calculate supported dossier deadlines.
-- Produce complete monthly and annual dossier-activity reports.
+## Fonctionnalités
 
-When the agent first uses a Mibba tool, complete the Mibba sign-in and authorization flow in the browser.
+- Retrouvez les dossiers, participants, biens et inventaires documentaires.
+- Recherchez dans les documents avec des citations à la page fournies par Mibba.
+- Vérifiez les pièces citées et calculez les échéances prises en charge.
+- Préparez des bilans complets de l'activité des dossiers, par mois ou par année.
 
-## Skills
+Lors de la première utilisation d'un outil Mibba, terminez la connexion et l'autorisation Mibba dans le navigateur.
 
-- `mibba`: introduction to Mibba and guidance for retrieving synchronized iNot or Fiducial information through the Mibba MCP. Claude Code exposes it as `/mibba:mibba`; command naming depends on the client.
-- `dossier-research`: evidence-backed dossier and document research.
-- `document-audit`: inventory, cited-piece, and deadline audits.
-- `activity-report`: complete bounded-period activity reports.
+## Compétences
 
-## Data access and privacy
+- `mibba` présente Mibba et explique comment retrouver les informations iNot ou Fiducial synchronisées via le MCP Mibba. Claude Code l'expose avec `/mibba:mibba`. Le nom de la commande dépend du client.
+- `dossier-research` recherche les dossiers et documents avec leurs sources.
+- `document-audit` vérifie les inventaires, les pièces citées et les échéances.
+- `activity-report` produit des bilans complets sur une période délimitée.
 
-This plugin contains no executable code, hooks, telemetry, or local credential handling. It connects only to `https://mcp.mibba.co/mcp`.
+## Accès aux données et confidentialité
 
-The agent sends the arguments of approved Mibba tool calls to Mibba. Mibba returns data from the workspace authorized during OAuth sign-in. The server checks the signed-in user's current workspace membership and scopes every query to that workspace. ChatGPT, Codex, or Claude handles returned data according to the terms of the product you use.
+Ce plugin ne contient aucun code exécutable, automatisme de cycle de vie, dispositif de télémétrie ou mécanisme local de gestion des identifiants. Il se connecte uniquement à `https://mcp.mibba.co/mcp`.
 
-You can revoke the connection from Mibba or your agent's connector settings. Disabling or uninstalling the plugin stops the agent from loading its skills and MCP configuration.
+L'assistant transmet à Mibba les arguments des appels d'outils autorisés. Mibba renvoie les données de l'espace autorisé lors de la connexion OAuth. Le serveur vérifie que l'utilisateur connecté appartient toujours à cet espace et limite chaque requête à ce périmètre. ChatGPT, Codex ou Claude traite les données renvoyées selon les conditions du produit utilisé.
 
-## Support
+Vous pouvez révoquer la connexion depuis Mibba ou les paramètres des connecteurs de votre assistant. La désactivation ou la désinstallation du plugin empêche le chargement de ses compétences et de sa configuration MCP.
 
-Visit [Mibba support](https://mibba.co/contact). Read the [privacy policy](https://mibba.co/politique-de-confidentialite) and [terms of use](https://mibba.co/conditions-generales-utilisation).
+## Assistance
+
+Consultez [l'assistance Mibba](https://mibba.co/contact), la [politique de confidentialité](https://mibba.co/politique-de-confidentialite) et les [conditions d'utilisation](https://mibba.co/conditions-generales-utilisation).

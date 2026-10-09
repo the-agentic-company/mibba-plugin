@@ -6,6 +6,11 @@ as its portable package format. OpenAI-specific requirements come from OpenAI's
 [submission reference](https://developers.openai.com/plugins/deploy/submission).
 These sources were checked on 9 October 2026.
 
+Mibba's base listing text, prompts, review scenarios, packaged README, and skills
+are in French for both OpenAI and Claude, as requested by the publisher. Keep the
+`fr-FR` listing aligned with the base text. Technical keys and client-defined values
+such as `Productivity`, `Read`, and `Write` retain their specified names.
+
 ## Portable package
 
 The authoritative package lives in `plugins/mibba/`:

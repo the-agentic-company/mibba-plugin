@@ -1,28 +1,28 @@
 ---
 name: dossier-research
-description: Researches Mibba notarial dossiers and their documents with traceable evidence. Use when the user asks to find, inspect, compare, or summarize a dossier, client, participant, property, document, or fact stored in Mibba.
+description: Recherche les dossiers notariaux Mibba et leurs documents avec des sources vérifiables. À utiliser pour retrouver, consulter, comparer ou résumer un dossier, un client, un participant, un bien, un document ou une information conservée dans Mibba.
 ---
 
-# Mibba dossier research
+# Recherche dans les dossiers Mibba
 
-Use the Mibba MCP tools to answer from the user's authorized workspace.
+Utilise les outils MCP Mibba pour répondre à partir de l'espace autorisé de l'utilisateur.
 
-## Method
+## Méthode
 
-1. Resolve the dossier before making detailed claims. Use `search_legal_records` when the user supplied a title, reference, type, status, date range, or Septeo identifier. Ask for clarification only when multiple plausible dossiers remain.
-2. Use `get_legal_record` to establish the dossier's participants, properties, folders, document metadata, case items, and human decisions.
-3. Find documents with `search_documents`. Prefer documents with active text when the task requires document contents.
-4. Search contents with `search_document_text` for known document IDs or `search_document_evidence` for a semantic question across the relevant corpus. Follow the tool's `nextSteps` and search-budget metadata.
-5. Read only the relevant pages with `get_document_page`, `get_document_evidence`, or `multi_get_document_evidence`. Do not load whole documents when page-level evidence is enough.
-6. Cite the URLs returned by Mibba. Never construct a citation URL, page number, dossier identifier, or document identifier yourself.
+1. Identifie le dossier avant de formuler des constats détaillés. Utilise `search_legal_records` si l'utilisateur fournit un titre, une référence, un type, un statut, une période ou un identifiant Septeo. Demande une précision seulement si plusieurs dossiers plausibles restent en concurrence.
+2. Utilise `get_legal_record` pour consulter les participants, les biens, les répertoires, les métadonnées documentaires, les points à traiter et les décisions humaines du dossier.
+3. Retrouve les documents avec `search_documents`. Privilégie les documents dont le texte est actif si la demande porte sur leur contenu.
+4. Recherche dans le contenu avec `search_document_text` pour des identifiants de documents connus, ou `search_document_evidence` pour une question sémantique dans le corpus pertinent. Suis les indications `nextSteps` et les métadonnées de budget de recherche renvoyées par l'outil.
+5. Lis les pages pertinentes avec `get_document_page`, `get_document_evidence` ou `multi_get_document_evidence`. Charge uniquement les pages nécessaires lorsque leurs sources suffisent.
+6. Cite les URL renvoyées par Mibba. N'invente pas d'URL de citation, de numéro de page, d'identifiant de dossier ou de document.
 
-## Reliability rules
+## Fiabilité
 
-- Separate facts stated in evidence from inference. Label uncertainty plainly.
-- Never treat an empty or failed search as proof that a fact or document does not exist.
-- Preserve the legal subject of a fact: a company's asset, debt, or obligation is not automatically a participant's personal fact.
-- Respect `humanDecisions` returned by the dossier assessment. Do not recreate a dismissed, resolved, or obsolete case item unless newer dated evidence justifies it, and explain that evidence.
-- Do not expose raw internal identifiers unless the user specifically needs one for a technical task.
-- If a tool returns an error, follow its retry hint. Use `report_semantic_friction` when the tools are semantically inadequate, ambiguous, repeatedly empty, or scoped incorrectly.
+- Distingue les faits établis par les sources des déductions. Signale clairement les incertitudes.
+- Une recherche vide ou en échec ne prouve pas l'absence d'un fait ou d'un document.
+- Respecte le sujet juridique de chaque fait. Un actif, une dette ou une obligation d'une société ne concerne pas automatiquement un participant à titre personnel.
+- Respecte les `humanDecisions` renvoyées par l'évaluation du dossier. Recrée un point écarté, résolu ou obsolète seulement si une source datée plus récente le justifie, et explique cette source.
+- Présente les identifiants internes bruts seulement si l'utilisateur en a besoin pour une tâche technique.
+- Si un outil renvoie une erreur, suis son indication de nouvelle tentative. Utilise `report_semantic_friction` si les outils sont inadaptés, ambigus, régulièrement vides ou mal délimités.
 
-End with a concise answer, the supporting citations, and any material coverage gaps.
+Termine par une réponse concise, ses citations et les éventuelles lacunes importantes de couverture.

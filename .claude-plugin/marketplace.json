@@ -6,14 +6,14 @@
     "url": "https://mibba.co"
   },
   "metadata": {
-    "description": "Mibba plugins for notarial dossier and document research.",
-    "version": "0.1.1"
+    "description": "Les dossiers notariaux et les documents Mibba, avec leurs sources.",
+    "version": "0.1.2"
   },
   "plugins": [
     {
       "name": "mibba",
       "source": "./plugins/mibba",
-      "description": "Research notarial dossiers and documents in Mibba with authenticated, workspace-scoped tools."
+      "description": "Vos dossiers iNot et Fiducial directement dans Claude, via Mibba. Consultez vos documents et obtenez des réponses avec les sources de votre espace autorisé."
     }
   ]
 }

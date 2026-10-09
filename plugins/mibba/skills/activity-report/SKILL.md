@@ -1,19 +1,19 @@
 ---
 name: activity-report
-description: Produces complete monthly or annual Mibba dossier activity reports. Use when the user asks how many dossiers were active, modified, or currently closed over a year or bounded period.
+description: Produit des bilans complets de l'activité des dossiers Mibba, par mois ou par année. À utiliser pour compter les dossiers actifs, modifiés ou actuellement clôturés sur une année ou une période délimitée.
 ---
 
-# Mibba activity report
+# Bilan d'activité Mibba
 
-Use `get_legal_record_activity_report` instead of counting a page of search results.
+Utilise `get_legal_record_activity_report` plutôt que de compter une page de résultats de recherche.
 
-## Method
+## Méthode
 
-1. Resolve the requested civil year or exact `from` and `toExclusive` period. Ask only if the period is genuinely ambiguous.
-2. Request the complete report. Periods longer than the tool's supported maximum must be split into non-overlapping intervals.
-3. Present the total and the monthly breakdown in Europe/Paris calendar time.
-4. Include the report's synchronization and data-quality metadata, especially records missing a synchronized modification date.
+1. Détermine l'année civile demandée ou la période exacte définie par `from` et `toExclusive`. Demande une précision seulement si la période est ambiguë.
+2. Demande le bilan complet. Découpe les périodes dépassant la durée maximale prise en charge par l'outil en intervalles sans chevauchement.
+3. Présente le total et la ventilation mensuelle dans le fuseau Europe/Paris.
+4. Inclue les métadonnées de synchronisation et de qualité des données du bilan, notamment les dossiers sans date de modification synchronisée.
 
-## Interpretation
+## Interprétation
 
-The report counts records by their synchronized Septeo modification timestamp. A record whose current status is `Clôturé` belongs to the closed-status subset, but that does not establish when the status changed. Never describe this as an exact closure-date report unless separate evidence supplies closure dates.
+Le bilan compte les dossiers à partir de leur date de modification Septeo synchronisée. Un dossier dont le statut actuel est `Clôturé` appartient au sous-ensemble des dossiers clôturés, mais ce statut n'établit pas la date du changement. Présente le résultat comme un bilan des statuts actuels. Parle de dates exactes de clôture seulement si des sources distinctes les établissent.

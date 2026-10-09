@@ -100,7 +100,7 @@ in `plugins/mibba/.claude-plugin/plugin.json` to satisfy directory policy:
 
 Keep the remaining directory-only values in the portal:
 
-- Short description: `Travaillez avec vos dossiers notariaux Mibba directement dans Claude.`
+- Short description: `iNot, Fiducial dans Claude`
 - Documentation: `https://mibba.co/docs/installer-le-plugin-mibba`
 - Support: `https://mibba.co/contact`
 - Terms of service: `https://mibba.co/conditions-generales-utilisation`

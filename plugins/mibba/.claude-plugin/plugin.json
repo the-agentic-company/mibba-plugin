@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "mibba",
   "displayName": "Mibba",
-  "version": "0.1.1",
-  "description": "Connectez Claude à Mibba pour consulter et gérer simplement vos dossiers notariaux autorisés.",
+  "version": "0.1.2",
+  "description": "Vos dossiers iNot et Fiducial directement dans Claude, via Mibba. Consultez vos documents et obtenez des réponses avec les sources de votre espace autorisé.",
   "author": {
     "name": "Mibba",
     "url": "https://mibba.co"
@@ -16,6 +16,12 @@
   "supportUrl": "https://mibba.co/contact",
   "termsOfServiceUrl": "https://mibba.co/conditions-generales-utilisation",
   "license": "proprietary",
-  "keywords": ["notariat", "notaire", "dossiers", "documents", "juridique"],
+  "keywords": [
+    "notariat",
+    "notaire",
+    "dossiers",
+    "documents",
+    "juridique"
+  ],
   "mcpServers": "./mcp.claude.json"
 }
