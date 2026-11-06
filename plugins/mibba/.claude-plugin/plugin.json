@@ -16,12 +16,6 @@
   "supportUrl": "https://mibba.co/contact",
   "termsOfServiceUrl": "https://mibba.co/conditions-generales-utilisation",
   "license": "proprietary",
-  "keywords": [
-    "notariat",
-    "notaire",
-    "dossiers",
-    "documents",
-    "juridique"
-  ],
+  "keywords": ["notariat", "notaire", "dossiers", "documents", "juridique"],
   "mcpServers": "./mcp.claude.json"
 }

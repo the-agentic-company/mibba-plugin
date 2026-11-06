@@ -10,15 +10,7 @@
   "homepage": "https://mibba.co",
   "repository": "https://github.com/the-agentic-company/mibba-plugin",
   "license": "MIT",
-  "keywords": [
-    "mibba",
-    "notariat",
-    "notaire",
-    "dossiers",
-    "documents",
-    "juridique",
-    "mcp"
-  ],
+  "keywords": ["mibba", "notariat", "notaire", "dossiers", "documents", "juridique", "mcp"],
   "extensions": {
     "com.openai": {
       "review": {
@@ -91,10 +83,7 @@
         "longDescription": "Vos dossiers iNot et Fiducial directement dans ChatGPT et Codex, via Mibba. Retrouvez vos dossiers notariaux, consultez leurs documents et obtenez des réponses avec leurs sources dans Mibba. Vérifiez les pièces citées dans un acte et les échéances prises en charge, puis préparez des bilans d'activité mensuels ou annuels. Un compte Mibba avec accès à un espace de travail est nécessaire. La connexion OAuth limite les recherches à votre espace autorisé. Les résultats dépendent des documents synchronisés disponibles ; vérifiez les sources avant de vous appuyer sur les conclusions.",
         "developerName": "Mibba",
         "category": "Productivity",
-        "capabilities": [
-          "Read",
-          "Write"
-        ],
+        "capabilities": ["Read", "Write"],
         "websiteURL": "https://mibba.co",
         "brandColor": "#111111",
         "defaultPrompt": [
