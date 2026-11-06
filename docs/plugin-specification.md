@@ -47,13 +47,13 @@ directory as defined by the common specification.
 OpenAI reads its settings from `plugin.json` under `extensions.com.openai`.
 The current package includes:
 
-| Setting | Location | Purpose |
-| --- | --- | --- |
-| Listing | `interface` | Display name, descriptions, developer name, category, capabilities, URLs, prompts, and icons |
-| Review scenarios | `review.test_cases` | Five positive and three negative cases for the single MCP server |
-| Commerce | `review.commerce` and `review.commerce_description` | Describe whether the plugin supports commerce |
-| Release notes | `publication.release_notes` | Describe the submitted release |
-| Translations | `publication.translations.fr-FR` | French subtitle and description |
+| Setting          | Location                                            | Purpose                                                                                      |
+| ---------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Listing          | `interface`                                         | Display name, descriptions, developer name, category, capabilities, URLs, prompts, and icons |
+| Review scenarios | `review.test_cases`                                 | Five positive and three negative cases for the single MCP server                             |
+| Commerce         | `review.commerce` and `review.commerce_description` | Describe whether the plugin supports commerce                                                |
+| Release notes    | `publication.release_notes`                         | Describe the submitted release                                                               |
+| Translations     | `publication.translations.fr-FR`                    | French subtitle and description                                                              |
 
 OpenAI's submission limits include a 30-character display name and short
 description, a 4000-character long description, and an 80-character developer

@@ -32,7 +32,7 @@ for name in ["plugin", "mcp"]:
 
 openai = manifest["extensions"]["com.openai"]
 interface = openai["interface"]
-# Older Codex clients still use the compatibility manifest. Reject drift.
+
 legacy = json.loads((root / ".codex-plugin" / "plugin.json").read_text())
 expected_legacy = {k: v for k, v in manifest.items() if k != "$schema"}
 expected_legacy["extensions"] = {
@@ -81,7 +81,7 @@ for skill in skills:
     text = skill.read_text()
     require(text.startswith("---\n") and "\nname: " in text and "\ndescription: " in text, f"Missing frontmatter: {skill}")
 
-# Use an allowlist rather than archiving the checkout or alternate client files.
+
 files = sorted({manifest_path, root / "mcp.json", root / "README.md", *assets, *skills})
 require(all(f.is_file() and not f.is_symlink() and f.resolve().is_relative_to(root.resolve()) for f in files), "Package members must be regular files inside the plugin")
 output = repo / "dist" / f"mibba-openai-{manifest['version']}.zip"
